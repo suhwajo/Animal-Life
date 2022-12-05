@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+
+<section class="home-section home-full-height bg-dark-30" id="home" data-background="{% static "images/black.png" %}">
+  <div class="titan-caption">
+    <div class="caption-content">
+      <!--<div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>-->
+      <div class="font-alt mb-40 titan-title-size-4">We are Animal Life</div>
+      <div class="module-subtitle font-serif">동물들의 일상을 text와 video로 제공합니다.</div>
+      <a class="section-scroll btn btn-border-w btn-round" href="{% url 'about_lifestyle' %}">Learn More</a>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

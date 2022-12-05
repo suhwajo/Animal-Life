@@ -1,0 +1,143 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+  <section class="module bg-dark-60 portfolio-page-header" data-background="{% static "images/menu-eat.jpg" %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2 class="module-title font-alt">Animal Life Style</h2>
+          <div class="module-subtitle font-serif">우리가 사랑하는 동물들의 일상</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-7">
+            <div class="embed-responsive embed-responsive-16by9">
+              <!--src부분에 비디오 출력될 부분-->
+                {% for video in eat_result %}
+                      <video width="500" height="500" id="eat{{forloop.counter}}" controls > 
+                      <source src="{{video.video.url}}" type="video/mp4">
+                      <b>{{video.title}}</b>
+                      </video>
+                  {% endfor %}
+                  <!--  SLEEP 관련 위에서 긁어옴
+                {% for video in sleep_result %}
+                      <video id="sleep{{forloop.counter}}" width="500" height="500" controls >
+                      <source src="{{video.video.url}}" type="video/mp4">
+                      <b>{{video.title}}</b>
+                      </video>
+                  {% endfor %}-->
+                <!-- <iframe class="embed-responsive-item" src= addvideo frameborder="0" allowfullscreen="allowfullscreen"></iframe>-->
+            </div>
+          </div>
+
+          <div class="col-sm-5 col-md-5 col-lg-5">
+            <div class="work-details">
+                <h5 class="work-details-title font-alt">Pet Record</h5>
+                <p>You can check your daily life related to your pet.</p>
+                <div class="view">
+                  <ul>
+                        {% for video in eat_result %}
+                        <li><a id="ceat{{forloop.counter}}" ><strong>{{ forloop.counter }} : </strong></a>
+                            <span class="font-serif">{{ video.begin_timestamp }} ~ {{ video.end_timestamp}}</span>
+                            <span class="font-serif">Duration</span>
+                        </li>
+                      {% endfor %}
+                      <!-- SLEEP 관련 위에서 긁어옴
+                      {% for video in sleep_result %}
+                        <li><a id="csleep{{forloop.counter}}"><strong>{{ forloop.counter }} : </strong></a>
+                            <span class="font-serif">{{ video.begin_timestamp }} ~ {{ video.end_timestamp}}</span>
+                            <span class="font-serif">Duration</span>
+                        </li>
+                      {% endfor %}
+                      -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <script>
+            $('#ceat1').click(function() {
+                $("#eat1").show();
+                $("#eat2").hide();
+                $("#eat3").hide();
+                $("#eat4").hide();
+                $("#eat5").hide();
+            })
+            $('#ceat2').click(function() {
+                $("#eat1").hide();
+                $("#eat2").show();
+                $("#eat3").hide();
+                $("#eat4").hide();
+                $("#eat5").hide();
+            })
+            $('#ceat3').click(function() {
+                $("#eat1").hide();
+                $("#eat2").hide();
+                $("#eat3").show();
+                $("#eat4").hide();
+                $("#eat5").hide();
+            })
+            $('#ceat4').click(function() {
+                $("#eat1").hide();
+                $("#eat2").hide();
+                $("#eat3").hide();
+                $("#eat4").show();
+                $("#eat5").hide();
+            })
+
+            $('#ceat5').click(function() {
+                $("#eat1").hide();
+                $("#eat2").hide();
+                $("#eat3").hide();
+                $("#eat4").hide();
+                $("#eat5").show();
+            })
+          </script>
+          <script>
+
+            $('#csleep1').click(function() {
+                $("#sleep1").show();
+                $("#sleep2").hide();
+                $("#sleep3").hide();
+                $("#sleep4").hide();
+                $("#sleep5").hide();
+            })
+            $('#csleep2').click(function() {
+                $("#sleep1").hide();
+                $("#sleep2").show();
+                $("#sleep3").hide();
+                $("#sleep4").hide();
+                $("#sleep5").hide();
+            })
+            $('#csleep3').click(function() {
+                $("#sleep1").hide();
+                $("#sleep2").hide();
+                $("#sleep3").show();
+                $("#sleep4").hide();
+                $("#sleep5").hide();
+            })
+            $('#csleep4').click(function() {
+                $("#sleep1").hide();
+                $("#sleep2").hide();
+                $("#sleep3").hide();
+                $("#sleep4").show();
+                $("#sleep5").hide();
+            })
+
+            $('#csleep5').click(function() {
+                $("#sleep1").hide();
+                $("#sleep2").hide();
+                $("#sleep3").hide();
+                $("#sleep4").hide();
+                $("#sleep5").show();
+            })
+          </script>
+      </div>
+    </div>
+  </section>
+{% endblock content %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'upload_create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    제목 <br>
+    <input type="text" name="title"> <br>
+    내용 <br>
+    <input type="file" name="video"><br>
+    <input type="submit" value="Submit" />
+
+</form>
+</body>
+</html>

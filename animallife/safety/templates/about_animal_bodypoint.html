@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+  <section class="module bg-dark-60 service-page-header" data-background="{% static "images/about-body.jpg" %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2 class="module-title font-alt">About</h2>
+          <div class="module-subtitle font-serif">For veterinarian. </br>Checking Animal Body Point and Movement.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="module" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2 class="module-title font-alt"></h2>
+          <div class="module-subtitle font-serif"></div>
+        </div>
+      </div>
+      <div class="row multi-columns-row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-lightbulb"></span></div>
+            <h3 class="features-title font-alt">Ideas and concepts</h3>
+            <p>동물 전문가들의 동물 분석 용이성을 위해 제작되었습니다.</br>동물의 바디포인트를 뽑아내 동작을 세밀하게 관찰 할 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-video"></span></div>
+            <h3 class="features-title font-alt">Point Checking</h3>
+            <p>동영상을 입력하면 동물의 바디포인트가 잡힌 영상이 추출됩니다.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-tools"></span></div>
+            <h3 class="features-title font-alt">Checking Health &amp; Behavior analysis</h3>
+            <p>동물 전문가들은 추출된 바디포인트를 이용해 의료, 행동 분석을</br>세밀하게 확인 할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+

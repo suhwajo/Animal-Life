@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+  <section class="module bg-dark-60 service-page-header" data-background="{% static "images/about-life.jpg" %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2 class="module-title font-alt">About</h2>
+          <div class="module-subtitle font-serif">Check your animal lifesylte.</br> You can check what your animals eat and sleep.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="module" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2 class="module-title font-alt"></h2>
+          <div class="module-subtitle font-serif"></div>
+        </div>
+      </div>
+      <div class="row multi-columns-row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-lightbulb"></span></div>
+            <h3 class="features-title font-alt">Ideas and concepts</h3>
+            <p>반려동물은 주인이 없을 때도 건강하게 지낼까?<br>이 의문을 해결하하기 위해 제작되었습니다.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-video"></span></div>
+            <h3 class="features-title font-alt">Eat Record</h3>
+            <p>밥 먹는 시간, 밥 먹는 주기 등을 기록하고 영상을 녹화해 웹페이지에서 볼 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-desktop"></span></div>
+            <h3 class="features-title font-alt">Sleep Record</h3>
+            <p>자는 시간, 자는 주기 등을 기록하고 영상을 녹화해 웹페이지에서 볼 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="features-item">
+            <div class="features-icon"><span class="icon-toolbox"></span></div>
+            <h3 class="features-title font-alt">With health check</h3>
+            <p>저장된 기록을 이용하면 병원에서 더 장확한 검사를 받을 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
